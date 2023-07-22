@@ -1,0 +1,6 @@
+.file-format-text {
+    display: none;
+}
+.file-format-text:first-child {
+    display: block;
+}

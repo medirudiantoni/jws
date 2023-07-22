@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <div id="alarm-ringing" class="absolute z-50 top-0 left-0 w-screen h-screen  bg-slate-800 hidden">
+    <div class="w-full h-full flex items-center justify-center">
+      <p id="adzan-message" class="text-white text-[200px] text-center font-bold"></p>
+    </div>
+  </div>
+
+  <div class="fullpage">
+    <div class="count-down"></div>
+    <div class="file-not-found"></div>
+    <div class="file-tidak-sesuai"></div>
+  </div>
+
+
+    <section class="w-screen h-screen flex flex-col justify-between items-center">
+
+        <div class="w-full h-3/4 absolute -z-10 top-0 left-0 bg-cover bg-center" style="background-image: url(./assets/gambar/masjid2.jpg);"></div>
+
+        <audio id="alarmSound" src="./assets/audio/alarm.mp3" preload="auto"></audio>
+
+        <div class="p-10 text-center mt-20 rounded-2xl bg-white/50 backdrop-blur-sm">
+            
+              <div id="clock" class="mx-auto text-[160px] font-bold">
+                  <span id="hM"></span>:<span id="s"></span>
+              </div>
+              <div class="text-4xl font-bold my-1 p-4">
+                <span id="day"></span>,
+                <span id="date"></span>
+                <span id="month"></span>
+                <span id="year"></span>
+              </div>
+
+        </div>
+        
+
+        <div class="w-full grid grid-cols-12 py-10 bg-white">
+
+          <div class="col-span-1"></div>
+          <div class="col-span-2 p-5 m-2 rounded-xl bg-slate-900 text-white text-center font-semibold">
+              <h5 class="text-3xl">Subuh</h5>
+              <p id="subuh" class="waktu-sholat text-6xl my-5"></p>
+          </div>
+          
+          <div class="col-span-2 p-5 m-2 rounded-xl bg-slate-900 text-white text-center font-semibold">
+              <h5 class="text-3xl">Dzuhur</h5>
+              <p id="dzuhur" class="waktu-sholat text-6xl my-5"></p>
+          </div>
+          
+          <div class="col-span-2 p-5 m-2 rounded-xl bg-slate-900 text-white text-center font-semibold">
+              <h5 class="text-3xl">Ashar</h5>
+              <p id="ashar" class="waktu-sholat text-6xl my-5"></p>
+          </div>
+          
+          <div class="col-span-2 p-5 m-2 rounded-xl bg-slate-900 text-white text-center font-semibold">
+              <h5 class="text-3xl">Maghrib</h5>
+              <p id="maghrib" class="waktu-sholat text-6xl my-5"></p>
+          </div>
+          
+          <div class="col-span-2 p-5 m-2 rounded-xl bg-slate-900 text-white text-center font-semibold">
+              <h5 class="text-3xl">Isya</h5>
+              <p id="isya" class="waktu-sholat text-6xl my-5"></p>
+          </div>
+          <div class="col-span-1"></div>
+
+        </div>
+
+    </section>
+
+<script src="script.js"></script>
+<script src="cekFile.js"></script>
+</body>
+</html>
