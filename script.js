@@ -53,7 +53,7 @@ const alarmSound = document.getElementById("alarmSound");
 const countdownDiv = document.createElement("div");
 countdownDiv.id = "count-down";
 const CountdownContainer = document.querySelector(".count-down");
-let duration = 0.25 * 60;
+let duration = 10 * 60;
 
 function startCountdown(duration, display) {
   let timer = duration,
