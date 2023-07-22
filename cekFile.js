@@ -31,8 +31,8 @@ checkJSONFileExistence(jsonFileUrl, function (isExist) {
   } else {
     const fileNotFound = document.querySelector('.file-not-found');
     const fileNotFoundText = document.createElement('div')
-    fileNotFound.classList.add('fixed', 'z-50', 'top-0', 'left-0','w-screen', 'h-screen', 'flex', 'items-center', 'justify-center', 'bg-black/80', 'text-white', 'text-4xl', 'font-bold');
-    fileNotFoundText.classList.add('container', 'bg-red-700', 'p-10', 'text-center', 'border-2', 'leading-[60px]');
+    fileNotFound.classList.add('fixed', 'z-50', 'top-0', 'left-0','w-screen', 'h-screen', 'flex', 'items-center', 'justify-center', 'bg-black/80', 'text-white','text-2xl', 'lg:text-4xl', 'font-bold');
+    fileNotFoundText.classList.add('container', 'bg-red-700', 'p-10', 'text-center', 'border-2', 'lg:leading-[60px]');
     fileNotFound.appendChild(fileNotFoundText);
 
     fileNotFoundText.textContent = 'File jadwal sholat tidak ditemukan!!!.... pastikan file yang anda masukkan sesuai dengan format(nama, dan ekstensi) yang ditentukan yaitu: "jadwalSholat.json"'

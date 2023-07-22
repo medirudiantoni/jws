@@ -71,12 +71,12 @@ function startCountdown(duration, display) {
     if (--timer < 0) {
       // Countdown has finished, you can perform any actions here
       clearInterval(intervalId);
-      display.classList.add('text-[150px]')
+      display.classList.add('lg:text-[150px]')
       display.textContent = "waktunya iqamah";
       alarmSound.play();
       setTimeout(() => {
         CountdownContainer.removeChild(countdownDiv);
-        display.classList.remove('text-[150px]')
+        display.classList.remove('lg:text-[150px]')
         display.textContent = minutes + ":" + seconds;
         alarmSound.pause();
         alarmSound.currentTime = 0;
@@ -98,7 +98,8 @@ function hitungMundur() {
     "justify-center",
     "bg-slate-950",
     "text-white",
-    "text-[400px]",
+    "text-7xl",
+    "lg:text-[400px]",
     "font-bold"
   );
   CountdownContainer.appendChild(countdownDiv);
